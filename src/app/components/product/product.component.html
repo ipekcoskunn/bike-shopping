@@ -1,0 +1,12 @@
+<div class="row m-2">
+    <div class="col-lg-3" *ngFor="let product of products">
+        <div class="form-group text-center">
+            <img style="width: 100px; height: 100px; margin-top: 10px;"
+                src="{{ product.imageUrl }}">
+            <h4>{{ product.name }}</h4>
+            <h5 class="text-danger">{{ product.price }}</h5>
+            <input type="number" class="form-control" value="1">
+            <button class="btn btn-primary mt-2" (click)="addCart(product)">Sepete Ekle</button>
+        </div>
+    </div>
+</div>
